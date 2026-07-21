@@ -1,138 +1,241 @@
-# NexusHR — Interactive Org Chart Builder
+# NexusHR – Interactive Organization Chart Builder
 
-NexusHR is a premium, enterprise-grade, high-fidelity Human Resources SaaS application designed to build, manage, and visualize corporate reporting structures. Styled with a minimalist, clean light theme inspired by top-tier modern productivity products (such as Linear, Notion, and Atlassian), the platform provides an interactive D3.js visualization workspace coupled with detailed HR analytical dashboards and directory listings.
-
----
-
-## 🎨 Design System & Visual Vibe
-
-- **Background Canvas**: Soft light slate `#FAFAFA`
-- **Cards & Elevators**: Pure clinical white `#FFFFFF`
-- **Primary Highlights**: Royal Sapphire `#2563EB`
-- **Borders & Grids**: Soft ash grey `#E5E7EB`
-- **Typography**: Complete Inter sans-serif typeface pairing clean vertical weights
-- **Philosophy**: Pure negative space layout, soft rounded corners (12px - 16px), and subtle micro-shadows. No visual noise, terminal logs, or flashy gradients.
+A modern and interactive **Organization Chart Builder** built with **React, TypeScript, Vite, Tailwind CSS, and D3.js**. NexusHR enables organizations to visualize reporting structures, manage employee information, analyze workforce statistics, and export organizational data through a clean, enterprise-inspired user interface.
 
 ---
 
-## 🚀 Key Features
+##  Live Demo
 
-### 1. Interactive D3.js Visualization Canvas
-- **Dynamic Layout Nodes**: Renders realistic corporate reporting relationships using high-performance SVG.
-- **D3 Zoom & Pan**: Fluid canvas navigation supporting double-clicking, mouse dragging, and wheel zooming.
-- **Orientation Toggle**: Effortlessly swap layout directions between **Vertical (Top-to-Bottom)** and **Horizontal (Left-to-Right)** with one click.
-- **Tree Collapsing & Expansion**: Click collapse handles to dynamically hide children sub-trees and repack the layout tightly; shows a direct count of hidden reports.
-
-### 2. Safeguarded Corporate CRUD Operations
-- **Onboard Hires**: Add direct reports directly to existing nodes or onboard standalone root managers.
-- **Profile Updates**: Modify employee compensation, contact emails, workplace presence, bios, and corporate locations.
-- **Dependency Safeguard**: The editor checks and blocks circular reporting structures (e.g. preventing an employee from reporting to themselves or their subordinates).
-- **Subordinate Re-routing**: When deleting a supervisor, their direct reports are not lost. They are automatically and safely re-routed to report directly to the deleted supervisor's manager.
-
-### 3. Comprehensive HR Analytical Dashboards
-- **Enterprise Statistics**: Live tracking of headcount, annual payroll investments, active departments, locations, and span-of-control ratios.
-- **SVG Budget Progress Bars**: Real-time visualization of capital distribution and personnel shares per department.
-- **Presence Distribution Donut**: Clean status tracking for Hybrid, Remote, Active, and On-leave divisions.
-
-### 4. Advanced Directory & Tabular Spreadsheets
-- **Roster Index**: Standard spreadsheet view displaying all active staff.
-- **Fuzzy Search & Highlighting**: Instantly search staff by name, role, email, or department; click rows to pan-and-zoom center the employee's node on the canvas.
-- **Multi-Level Filters**: Slice organization records by departments, office locations, and workplace حضور status.
-- **Spreadsheet Sorting**: Sort employees alphabetically, by annual salaries, or by tenure start date.
-
-### 5. Multi-format Serialization (Import & Export)
-- **JSON Serialization**: Import and export standard JSON records of your employee state.
-- **Vector SVG Export**: Download clean, scalable vector representations of the active reporting canvas.
-- **High-Resolution PNG**: Render the SVG canvas to an HTML5 canvas and trigger a high-resolution `.png` download.
+> **Coming Soon**
 
 ---
 
-## 🛠️ Technology Stack
+##  Screenshots
 
-- **Framework**: React 19 + TypeScript
-- **Bundler**: Vite 6.x
-- **Animation**: Framer Motion
-- **Visualization Layout**: D3.js (D3-Hierarchy, D3-Zoom, D3-Selection)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Persistence**: Local Storage Engine
+### Interactive Organization Chart
+> Add a screenshot here
+
+![Organization Chart](screenshots/org-chart.png)
+
+### Employee Directory
+> Add a screenshot here
+
+![Employee Directory](screenshots/directory.png)
+
+### Department Dashboard
+> Add a screenshot here
+
+![Department Dashboard](screenshots/departments.png)
+
+### HR Analytics Dashboard
+> Add a screenshot here
+
+![Analytics Dashboard](screenshots/statistics.png)
 
 ---
 
-## 📂 Folder Structure
+##  Features
+
+###  Interactive Organization Chart
+- Interactive D3.js tree visualization
+- Zoom and pan functionality
+- Vertical and horizontal layout switching
+- Expand and collapse reporting hierarchy
+- Smooth navigation between employees
+
+###  Employee Management
+- Add new employees
+- Edit employee information
+- Delete employees safely
+- Automatic subordinate reassignment
+- Circular reporting validation
+
+###  Employee Directory
+- Search employees instantly
+- Department filtering
+- Presence filtering
+- Sort by salary
+- Sort by joining date
+- Click employee to locate in organization chart
+
+###  Department Hub
+- Department summaries
+- Team member listings
+- Department payroll
+- Average salary statistics
+- Team leadership overview
+
+###  Analytics Dashboard
+- Total employees
+- Payroll statistics
+- Department distribution
+- Workplace status charts
+- Salary insights
+- Organization metrics
+
+###  Import & Export
+- Import organization data (JSON)
+- Export organization data (JSON)
+- Export organization chart as SVG
+- Export organization chart as PNG
+
+###  Local Storage
+- Automatic data persistence
+- Fast client-side performance
+- No backend required
+
+---
+
+#  Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React 19 | Frontend Framework |
+| TypeScript | Type Safety |
+| Vite | Build Tool |
+| Tailwind CSS | Styling |
+| D3.js | Organization Chart Visualization |
+| Lucide React | Icons |
+| Framer Motion | Animations |
+| Local Storage | Data Persistence |
+
+---
+
+#  Project Structure
 
 ```text
-/
-├── public/                 # Static asset folders
-├── src/
-│   ├── components/         # Modular interface components
-│   │   ├── AddEditModal.tsx       # Onboard & Profile modifier form
-│   │   ├── DepartmentsView.tsx    # Department metrics and rosters
-│   │   ├── DetailsPanel.tsx       # Right profile inspector sidebar
-│   │   ├── DirectoryView.tsx      # Tabular spreadsheet grid directory
-│   │   ├── OrgChartCanvas.tsx     # Interactive D3 SVG tree canvas
-│   │   └── StatsDashboard.tsx     # HR analytical dashboards
-│   ├── data/
-│   │   └── sampleData.ts          # Default mock roster of 40 corporate staff
-│   ├── App.tsx             # Application coordinator and file state manager
-│   ├── index.css           # Global typography and Tailwind directives
-│   ├── main.tsx            # React entrypoint binder
-│   └── types.ts            # Shared TypeScript types and interfaces
-├── package.json            # Dependency manifest
-├── tsconfig.json           # Compiler configuration
-└── vite.config.ts          # Vite bundler parameters
+Interactive-Org-Chart-Builder
+│
+├── src
+│   ├── components
+│   │   ├── AddEditModal.tsx
+│   │   ├── DepartmentsView.tsx
+│   │   ├── DetailsPanel.tsx
+│   │   ├── DirectoryView.tsx
+│   │   ├── OrgChartCanvas.tsx
+│   │   └── StatsDashboard.tsx
+│   │
+│   ├── data
+│   │   └── sampleData.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── types.ts
+│   └── vite-env.d.ts
+│
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+├── index.html
+└── README.md
 ```
 
 ---
 
-## ⚡ Installation & Execution
+#  Getting Started
 
-### Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) (v18+) installed on your machine.
+## Prerequisites
 
-### Setup Instructions
+Make sure you have installed:
 
-1. **Extract/Clone the project workspace**
-2. **Install node dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Execute local developer server**:
-   ```bash
-   npm run dev
-   ```
-   The local environment is exposed on port `3000` at [http://localhost:3000/](http://localhost:3000/).
-
-4. **Verify Linter and Build Compilation**:
-   ```bash
-   npm run lint
-   ```
-   and
-   ```bash
-   npm run build
-   ```
+- Node.js (v18 or later)
+- npm
 
 ---
 
-## 📸 Screenshots Section
+## Installation
 
-*Visual indicators are rendered inside the live application iframe.*
+Clone the repository
 
-1. **Workspace Interactive Tree**: Main page with custom bezel paths, hover actions, layout orientation controls, search bars, and the slider panel.
-2. **Analytical Statistics**: Department budget trackers, progress bars, and presence donuters.
-3. ** Roster Spreadsheet**: Tabular employee lists, quick-search, sorting filters.
+```bash
+git clone https://github.com/NoorULEman023/Interactive-Org-Chart-Builder.git
+```
+
+Navigate to the project folder
+
+```bash
+cd Interactive-Org-Chart-Builder
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit
+
+```
+http://localhost:3000
+```
 
 ---
 
-## 🔮 Future Improvements
+#  Build for Production
 
-- **Drag-and-Drop Node Reassignment**: Allow dragging a card on the canvas and dropping it under a different supervisor card to automatically execute a reporting line rewrite.
-- **Multiple Organizations**: Support managing multiple corporate profiles from a central workspace.
-- **Salary Band Modeling**: HR tools to model future salary increases and department hiring forecasts.
-- **Slack & G-Suite Sync**: Synchronize active employee rosters with enterprise directories automatically.
+```bash
+npm run build
+```
+
+Preview production build
+
+```bash
+npm run preview
+```
 
 ---
 
-## 📄 License
+#  Future Improvements
 
-Distributed under the Apache-2.0 License. See the header file declarations for supplementary licensing details.
+- Drag-and-drop employee reassignment
+- Multiple organization support
+- Authentication and user roles
+- Database integration
+- Cloud synchronization
+- Employee profile images
+- Dark mode
+- PDF organization chart export
+- Advanced HR reporting
+- REST API integration
+
+---
+
+#  Design Highlights
+
+- Minimal Light Theme
+- Responsive Layout
+- Modern Enterprise UI
+- Clean Typography
+- Soft Shadows
+- Rounded Components
+- Professional Dashboard Design
+
+---
+
+#  License
+
+This project is licensed under the **MIT License**.
+
+---
+
+#  Author
+
+**Noor UL Eman**
+
+**BS Software Engineering Student**
+
+GitHub: https://github.com/NoorULEman023
+
+---
+
+##  Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
