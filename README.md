@@ -102,6 +102,12 @@ https://interactive-org-chart-builder-658ozz8cq-nooruleman.vercel.app/
 ```text
 Interactive-Org-Chart-Builder
 │
+├── Screenshots/
+│   ├── dashboard.png
+│   ├── org-chart.png
+│   ├── employee-details.png
+│   └── dark-mode.png
+│
 ├── src
 │   ├── components
 │   │   ├── AddEditModal.tsx
