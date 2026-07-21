@@ -13,22 +13,18 @@ A modern and interactive **Organization Chart Builder** built with **React, Type
 ##  Screenshots
 
 ### Interactive Organization Chart
-> Add a screenshot here
 
 ![Organization Chart](Screenshots/org-chart.png)
 
 ### Employee Directory
-> Add a screenshot here
 
 ![Employee Directory](Screenshots/directory.png)
 
 ### Department Dashboard
-> Add a screenshot here
 
 ![Department Dashboard](Screenshots/departments.png)
 
 ### HR Analytics Dashboard
-> Add a screenshot here
 
 ![Analytics Dashboard](Screenshots/statistics.png)
 
