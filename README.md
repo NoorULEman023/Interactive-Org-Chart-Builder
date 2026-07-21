@@ -6,7 +6,7 @@ A modern and interactive **Organization Chart Builder** built with **React, Type
 
 ##  Live Demo
 
-> **Coming Soon**
+https://interactive-org-chart-builder-658ozz8cq-nooruleman.vercel.app/
 
 ---
 
